@@ -1,0 +1,27 @@
+alias gs='git status'
+alias topq='cd /c/Source/Production/TopQ/TopHat'
+alias sharedapi='cd /c/Source/Production/SharedAPI'
+alias analytics='cd /c/Source/Production/Analytics'
+alias analyticswatch='cd /c/Source/Production/Analytics/eA.Analytics.UI/ExtJs/analytics/ && sencha app watch'
+alias admin='cd /c/Source/Production/Administration'
+alias community='cd /c/Source/Production/Community'
+alias exchange='cd /c/Source/Production/Exchange'
+alias input='cd /c/Source/Production/Input'
+alias legacy='cd /c/Source/Production/Legacy'
+alias platform='cd /c/Source/Production/Platform'
+alias powerlink='cd /c/Source/Production/Powerlink'
+alias roundhouse='cd /c/Source/Production/Roundhouse'
+alias fix='git reset HEAD --hard && git pull'
+
+function push {
+	if [$1 -eq '']; then
+		echo need to include a message
+	else
+	
+
+	git add -A
+	git commit -m $1
+	git push
+	#future, add the push upstream condition here
+	fi
+}
